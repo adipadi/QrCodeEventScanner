@@ -1,12 +1,34 @@
-hallaisen
 
-<input type="file" accept="image/*" capture="environment">
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <title>Instascan</title>
+        <script type="text/javascript" src="instascan.min.js"></script>
+    </head>
+    <body>
 
-<script>
-    const fileInput = document.getElementById('file-input');
-    window.location.href = 'fileInput';
+    hallaisen
+            
+    <input type="file" accept="image/*" capture="environment" id=cameraFile>
+    <script>
+            const fileInput = document.getElementById('file-input');
+          
+            fileInput.addEventListener('change', (e) => Console.log("LOG"+e.target.files +"  "+ e.target.image));
+          </script>
+    skjera bagtera 
 
-    fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
-</script>
+    <video id="preview"></video>
+    <script type="text/javascript">
+        let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+        scanner.addListener('scan', function (content, image) {
+            console.log(content);
+        });
 
-skjera bagtera 
+        Instascan.Camera.getCameras().then(function (cameras) {
+            if (cameras.length > 0) {
+                scanner.start(cameras[0]);
+            }
+        });
+    </script>
+    </body>
+</html>
