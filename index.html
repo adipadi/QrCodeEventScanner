@@ -2,4 +2,8 @@ hallaisen
 
 <input type="file" accept="image/*" capture="environment">
 
-lolhbuh
+<script>
+    const fileInput = document.getElementById('file-input');
+  
+    fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+</script>
