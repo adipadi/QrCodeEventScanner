@@ -12,7 +12,10 @@
     <script>
       const fileInput = document.getElementById('file-input');
     
-      fileInput.addEventListener('change', (e) => alert(":"+ e.target.content +  e.target.image.content +e.target.image+e.target));
+      fileInput.addEventListener('change', (e) => alert(":"+ e.target.conten));
+      fileInput.addEventListener('change', (e) => alert(":"+  e.target.image.content));
+      fileInput.addEventListener('change', (e) => alert(":"+ +e.srcElement));
+
     </script>
     skjera bagtera 
 
