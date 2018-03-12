@@ -13,8 +13,9 @@
     <script>
             const fileInput = document.getElementById('file-input');
             fileInput.addEventListener('change', (e) => document.getElementById('iden').value="LOG"+e.target.files +"  "+ e.target.image);
-            fileInput.addEventListener('change', (e) => Console.log("LOG"+e.target.files +"  "+ e.target.image));
-            alert("log2"+e.target.files +" "+e.target.content);
+            fileInput.addEventListener('change', (e) => Console.log("LOG"+e.target.files +"  "+ e.target.image),
+            alert("log2"+e.target.files +" "+e.target.content));
+           
 
           </script>
     skjera bagtera 
