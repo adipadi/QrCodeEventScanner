@@ -7,17 +7,13 @@
     </head>
     <body>
 
-    hallaisen
-    <a id="iden"></a>
-    <input type="file" accept="image/*" capture="environment" id="file-input">
+    hallaisen du
+    <input type="file" accept="image/*" id="file-input">
     <script>
-            const fileInput = document.getElementById('file-input');
-            fileInput.addEventListener('change', (e) => document.getElementById('iden').value="LOG"+e.target.files +"  "+ e.target.image);
-            fileInput.addEventListener('change', (e) => Console.log("LOG"+e.target.files +"  "+ e.target.image),
-            alert("log2"+e.target.files +" "+e.target.content));
-           
-
-          </script>
+      const fileInput = document.getElementById('file-input');
+    
+      fileInput.addEventListener('change', (e) => alert(e.target.content));
+    </script>
     skjera bagtera 
 
     <video id="preview"></video>
